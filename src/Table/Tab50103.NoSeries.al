@@ -20,6 +20,20 @@ table 50103 "No Series"
             TableRelation = "No. Series".Code;
             ValidateTableRelation = true;
         }
+        // field(3; "Serial No."; Code[20])
+        // {
+        //     Caption = 'Sorszam';
+        //     DataClassification = CustomerContent;
+        //     TableRelation = "No. Series".Code;
+        //     ValidateTableRelation = true;
+        // }
+        field(3; "Posted Nutrition No."; Code[20])
+        {
+            Caption = 'Konyvelt Taplalkozas Szama';
+            DataClassification = CustomerContent;
+            TableRelation = "No. Series".Code;
+            ValidateTableRelation = true;
+        }
     }
     keys
     {
