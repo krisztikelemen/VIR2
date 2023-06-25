@@ -19,6 +19,10 @@ page 50104 "No Series Administration"
                 {
                     ApplicationArea = All;
                 }
+                field("Posted Nutrition No."; Rec."Posted Nutrition No.")
+                {
+                    ApplicationArea = All;
+                }
             }
         }
     }

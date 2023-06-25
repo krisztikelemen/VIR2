@@ -1,12 +1,12 @@
 /// <summary>
-/// Page Nutrition Order Subform (ID 50103).
+/// Page Posted Nutiriton Order Subform (ID 50107).
 /// </summary>
-page 50103 "Nutrition Order Subform"
+page 50107 "Posted Nutrition Order Subform"
 {
-    Caption = 'Taplalkozasi Adatok Reszletesen';
+    Caption = 'Posted Nutrition Order Subform';
     PageType = ListPart;
-    SourceTable = "Nutrition Line";
-    // AutoSplitKey = true;
+    SourceTable = "Posted Nutrition Line";
+    Editable = false;
 
     layout
     {
@@ -25,7 +25,6 @@ page 50103 "Nutrition Order Subform"
                 field("Nutrition Code"; Rec."Nutrition Code")
                 {
                     ApplicationArea = All;
-                    Lookup = true;
                 }
                 field(Description; Rec.Description)
                 {
@@ -59,6 +58,7 @@ page 50103 "Nutrition Order Subform"
                 {
                     ApplicationArea = All;
                 }
+
             }
 
             group(Osszesen)

@@ -78,4 +78,59 @@ page 50101 "Nutrition Order"
             }
         }
     }
+
+    actions
+    {
+        area(Processing)
+        {
+            action(Close)
+            {
+                Caption = 'Taplalkozas lezarasa';
+                ApplicationArea = All;
+                trigger OnAction()
+                begin
+                    NutritionActions.ChangeStatus(Rec, Rec.Status::Close)
+                end;
+            }
+            action(Reopen)
+            {
+                Caption = 'Taplalkozas ujranyitasa';
+                ApplicationArea = All;
+                trigger OnAction()
+                begin
+                    NutritionActions.ChangeStatus(Rec, Rec.Status::Open)
+                end;
+            }
+            action("Export")
+            {
+                Caption = 'Exportalas fajlba';
+                ApplicationArea = All;
+                trigger OnAction()
+                begin
+                    CurrPage.SetSelectionFilter(Rec);
+                    Xmlport.Run(50100, false, false, Rec);
+                end;
+            }
+            action("Post")
+            {
+                Caption = 'Konyveles';
+                ApplicationArea = All;
+
+                trigger OnAction()
+                begin
+                    NutritionActions.PostOrder(Rec);
+                end;
+            }
+        }
+    }
+
+    trigger OnOpenPage()
+    begin
+        PageEditable := Rec.Status = Rec.Status::Open;
+        CurrPage.Editable(PageEditable)
+    end;
+
+    var
+        PageEditable: Boolean;
+        NutritionActions: Codeunit "Nutrition Actions";
 }

@@ -1,10 +1,10 @@
 /// <summary>
-/// Table Nutrition Line (ID 50102).
+/// Table Posted Nutrition Line (ID 50105).
 /// </summary>
-table 50102 "Nutrition Line"
+table 50105 "Posted Nutrition Line"
 {
-    Caption = 'Taplalkozasi Sor';
-    DataClassification = ToBeClassified;
+    Caption = 'Konyvelt Taplalkozasi Sor';
+    DataClassification = CustomerContent;
     LookupPageId = "Nutrition Order Subform";
     DrillDownPageId = "Nutrition Order Subform";
 
@@ -20,7 +20,6 @@ table 50102 "Nutrition Line"
         {
             Caption = 'Sorszam';
             DataClassification = CustomerContent;
-            // TableRelation = "Nutrition Header"."Nutrition No.";
         }
         field(3; "Nutrition Code"; Code[20])
         {

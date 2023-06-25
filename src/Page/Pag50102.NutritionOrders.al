@@ -44,19 +44,4 @@ page 50102 "Nutrition Orders"
             }
         }
     }
-
-    actions
-    {
-        area(Processing)
-        {
-            action(Release)
-            {
-
-            }
-            action(Reopen)
-            {
-
-            }
-        }
-    }
 }

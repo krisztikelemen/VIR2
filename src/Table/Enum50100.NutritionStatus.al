@@ -9,7 +9,7 @@ enum 50100 "Nutrition Status"
     {
         Caption = 'Nyitott';
     }
-    value(1; " Release")
+    value(1; "Close")
     {
         Caption = 'Lezart';
     }
